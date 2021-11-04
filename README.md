@@ -26,3 +26,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 # simples-dental-teste
+Projeto feito utilizando ANGULAR 12.2.12 e como biblioteca de estilização foi utilizado ANGULAR MATERIAL. O projeto apresenta 2 telas, uma de login e uma com os albuns e 3 components básicos [login, albuns e album]. O component Albuns possue todos os Albuns consumidos da API referente aos dados gerais de cada ALBUM. O component Album possue todas as fotos de cada ALBUM, consumindo a API referente aos dados de cada foto e verificando cada foto que pertence a cada album.
