@@ -1,0 +1,17 @@
+<div>
+    <mat-grid-list cols="1" rowHeight="3:1" *ngFor="let album of albumSlice" (click)="setVisibility(album)">
+
+        <mat-grid-tile-header>{{album.title}}</mat-grid-tile-header>
+        <mat-grid-tile
+            style="background-image: url({{album.photos[0].thumbnailUrl}}); background-repeat: no-repeat; background-position: center;">
+        </mat-grid-tile>
+        <ng-container *ngIf="album.visibility">
+    
+            <mat-grid-list cols="4" rowHeight="4:1" *ngFor="let photo of album.photos">
+                <app-album [visibility] = "album.visibility" [album] = "album.photos" [title]="album.title"></app-album>
+            </mat-grid-list>
+        </ng-container>
+    </mat-grid-list>
+    <mat-paginator [length]="albuns.length" [pageSize]="pageSize" [pageSizeOptions]="pagesizeOptions"
+        (page)="onPageChange($event)"></mat-paginator>
+</div>

@@ -1,0 +1,11 @@
+<div *ngIf="visibility">
+    <h3>Photos of {{title}}</h3>
+    <mat-grid-list cols="3" rowHeight="3:3" >
+        <div *ngFor="let item of album">        
+            <mat-grid-tile
+            style="background-image: url({{item.url}}); background-repeat: no-repeat; background-position: center;">
+            <mat-grid-tile-header>{{item.title}}</mat-grid-tile-header>
+        </mat-grid-tile>
+    </div>
+</mat-grid-list>
+</div>
